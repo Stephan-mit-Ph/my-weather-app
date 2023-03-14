@@ -1,0 +1,11 @@
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px
+}
+
+.form__input{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
