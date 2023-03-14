@@ -16,13 +16,16 @@ const initialActivities =[
 function App() {
   const [activities, setActivities]= useState(initialActivities);
 
+const filteredActivities = activities.filter((activity) => activity.isForGoodWeather === "on")
+console.log(filteredActivities)
+
  function handleAddActivity(newActivity){
     setActivities([{id: uid(), ...newActivity}, ...activities]);
   }
-  console.log(activities)
+  //console.log(activities)
   return (
     <div className="App">
-      <List activities={activities}/>
+      <List activities={filteredActivities}/>
       <Form onAddActivity={handleAddActivity}/>
     </div>
   );
